@@ -37,7 +37,7 @@ double sinn(double x, uint16_t count) {
     double result = x;
     int pre = pown(-1, count - 1);
     while (count > 1) {
-        result += pre * ((pown(x, 2 * count - 1)) / fact(2 * count - 1));
+        result += pown(-1, count - 1) * calcItem(x, 2 * count - 1);
         count--;
     }
     return result;
@@ -47,7 +47,7 @@ double cosn(double x, uint16_t count) {
     double result = 1;
     int pre = pown(-1, count - 1);
     while (count > 1) {
-        result += pre * ((pown(x, 2 * count - 2)) / fact(2 * count - 2));
+        result += pown(-1, count - 1) * calcItem(x, 2 * count - 2);
         count--;
     }
     return result;
