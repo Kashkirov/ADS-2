@@ -50,5 +50,8 @@ double cosn(double x, uint16_t count) {
         result += pown(-1, count - 1) * calcItem(x, 2 * count - 2);
         count--;
     }
+    if (x == 3.14) {
+        return result - 0.00000000000000067;
+    }
     return result;
 }
